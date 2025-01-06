@@ -1,0 +1,105 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:-//MaxDaysOff//EN
+METHOD:PUBLISH
+X-WR-CALNAME:Optimized NSW Holidays 2025 (No Bank Holiday)
+X-WR-TIMEZONE:Australia/Sydney
+
+BEGIN:VEVENT
+UID:newyear-5day-2025@maxdaysoff
+SUMMARY:🎆 Short Holiday Block: New Year 5-Day Break
+DTSTAMP:20231230T000000Z
+DTSTART;VALUE=DATE:20250101
+DTEND;VALUE=DATE:20250106
+LOCATION:Wishing you a bright start to the New Year! 🎉
+DESCRIPTION:Public Holiday: New Year's Day is Wed 1 Jan\nWhat you need to do: Take Thu 2 & Fri 3 Jan off for a 5-day break (1–5 Jan)\nCredit: https://twitter.com/brendxu\nBuy me a coffee: https://buymeacoffee.com/brendxu
+URL:https://twitter.com/brendxu
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Reminder: 1 week until your 🎆 Short Holiday Block: New Year 5-Day Break
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:australiaday-5day-2025@maxdaysoff
+SUMMARY:🇦🇺 Short Holiday Block: Australia Day 5-Day Break
+DTSTAMP:20231230T000000Z
+DTSTART;VALUE=DATE:20250123
+DTEND;VALUE=DATE:20250128
+LOCATION:Enjoy celebrating Australia Day! 🦘
+DESCRIPTION:Public Holiday: Australia Day is Mon 27 Jan\nWhat you need to do: Take Thu 23 & Fri 24 Jan off for a 5-day break (23–27 Jan)\nCredit: https://twitter.com/brendxu\nBuy me a coffee: https://buymeacoffee.com/brendxu
+URL:https://twitter.com/brendxu
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Reminder: 1 week until your 🇦🇺 Short Holiday Block: Australia Day 5-Day Break
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:kingsbday-4day-2025@maxdaysoff
+SUMMARY:👑 Short Holiday Block: King’s Birthday 4-Day Break
+DTSTAMP:20231230T000000Z
+DTSTART;VALUE=DATE:20250606
+DTEND;VALUE=DATE:20250610
+LOCATION:Enjoy the royal festivities! 🏰
+DESCRIPTION:Public Holiday: King’s Birthday is Mon 9 Jun\nWhat you need to do: Take Fri 6 Jun off for a 4-day weekend (6–9 Jun)\nCredit: https://twitter.com/brendxu\nBuy me a coffee: https://buymeacoffee.com/brendxu
+URL:https://twitter.com/brendxu
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Reminder: 1 week until your 👑 Short Holiday Block: King’s Birthday 4-Day Break
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:labourday-4day-2025@maxdaysoff
+SUMMARY:💪 Short Holiday Block: Labour Day 4-Day Break
+DTSTAMP:20231230T000000Z
+DTSTART;VALUE=DATE:20251003
+DTEND;VALUE=DATE:20251007
+LOCATION:Enjoy your Labour Day break! 🎈
+DESCRIPTION:Public Holiday: Labour Day is Mon 6 Oct\nWhat you need to do: Take Fri 3 Oct off for a 4-day weekend (3–6 Oct)\nCredit: https://twitter.com/brendxu\nBuy me a coffee: https://buymeacoffee.com/brendxu
+URL:https://twitter.com/brendxu
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Reminder: 1 week until your 💪 Short Holiday Block: Labour Day 4-Day Break
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:easter-anzac-10day-2025@maxdaysoff
+SUMMARY:🐰 Long Holiday Block: Easter + Anzac 10-Day Break
+DTSTAMP:20231230T000000Z
+DTSTART;VALUE=DATE:20250418
+DTEND;VALUE=DATE:20250428
+LOCATION:Have a wonderful Easter 🐣 and a meaningful Anzac Day 🌺
+DESCRIPTION:Public Holiday: Good Friday is Fri 18 Apr, Easter Monday is Mon 21 Apr, Anzac Day is Fri 25 Apr\nWhat you need to do: Take Tue 22, Wed 23 & Thu 24 Apr off for a 10-day break (18–27 Apr)\nCredit: https://twitter.com/brendxu\nBuy me a coffee: https://buymeacoffee.com/brendxu
+URL:https://twitter.com/brendxu
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Reminder: 1 week until your 🏝️ Long Holiday Block: Easter + Anzac 10-Day Break
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:christmas-newyear-10day-2025-26@maxdaysoff
+SUMMARY:🎄 Long Holiday Block: Christmas 2025 → New Year 2026 10-Day Break
+DTSTAMP:20231230T000000Z
+DTSTART;VALUE=DATE:20251225
+DTEND;VALUE=DATE:20260104
+LOCATION:Merry Christmas and Happy New Year! 🎅🎆
+DESCRIPTION:Public Holiday: Christmas Day is Thu 25 Dec, Boxing Day is Fri 26 Dec, New Year’s Day is Thu 1 Jan 2026\nWhat you need to do: Take Mon 29, Tue 30, Wed 31 Dec 2025 & Fri 2 Jan 2026 off for a 10-day break (25 Dec–3 Jan)\nCredit: https://twitter.com/brendxu\nBuy me a coffee: https://buymeacoffee.com/brendxu
+URL:https://twitter.com/brendxu
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Reminder: 1 week until your 🎄 Long Holiday Block: Christmas 2025 → New Year 2026 10-Day Break
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR
