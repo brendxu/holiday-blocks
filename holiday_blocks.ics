@@ -25,7 +25,7 @@ BEGIN:VEVENT
 UID:australiaday-5day-2025@maxdaysoff
 SUMMARY:🇦🇺 Short Holiday Block: Australia Day 5-Day Break
 DTSTAMP:20231230T000000Z
-DTSTART;VALUE=DATE:20250118
+DTSTART;VALUE=DATE:20250123
 DTEND;VALUE=DATE:20250128
 LOCATION:Enjoy celebrating Australia Day! 🦘
 DESCRIPTION:Public Holiday: Australia Day is Mon 27 Jan\nWhat you need to do: Take Thu 23 & Fri 24 Jan off for a 5-day break (23–27 Jan)
