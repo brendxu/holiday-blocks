@@ -1,0 +1,45 @@
+name: AI PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+      models: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get PR diff
+        run: git diff origin/${{ github.base_ref }}...HEAD > pr.diff
+
+      - name: AI review via GitHub Models
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          DIFF=$(cat pr.diff)
+          RESPONSE=$(curl -s https://models.inference.ai.azure.com/chat/completions \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n \
+              --arg diff "$DIFF" \
+              '{
+                model: "gpt-4o-mini",
+                max_tokens: 1024,
+                messages: [{
+                  role: "user",
+                  content: ("You are reviewing changes to a static iCalendar (ICS) subscription file for NSW public holidays. Check for: correct DTEND (must be day after last break day), valid UID format ({holiday}-{duration}-{year}@maxdaysoff), matching VALARM DESCRIPTION and event SUMMARY, correct \\n usage in DESCRIPTION (not real newlines), and that BEGIN/END blocks are balanced. Be concise and actionable.\n\nPR diff:\n" + $diff)
+                }]
+              }')")
+          echo "Raw API response: $RESPONSE"
+          COMMENT=$(echo "$RESPONSE" | jq -r '.choices[0].message.content // .error.message // .message // "Unknown error"')
+          printf "## AI Review (GitHub Models)\n\n%s" "$COMMENT" > body.txt
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body-file body.txt
