@@ -39,6 +39,5 @@ jobs:
                 }]
               }')")
           COMMENT=$(echo "$RESPONSE" | jq -r '.choices[0].message.content')
-          gh pr comment "$PR_NUMBER" --repo "$REPO" --body "## AI Review (GitHub Models)
-
-$COMMENT"
+          printf "## AI Review (GitHub Models)\n\n%s" "$COMMENT" > body.txt
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body-file body.txt
