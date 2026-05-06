@@ -38,6 +38,7 @@ jobs:
                   content: ("You are reviewing changes to a static iCalendar (ICS) subscription file for NSW public holidays. Check for: correct DTEND (must be day after last break day), valid UID format ({holiday}-{duration}-{year}@maxdaysoff), matching VALARM DESCRIPTION and event SUMMARY, correct \\n usage in DESCRIPTION (not real newlines), and that BEGIN/END blocks are balanced. Be concise and actionable.\n\nPR diff:\n" + $diff)
                 }]
               }')")
-          COMMENT=$(echo "$RESPONSE" | jq -r '.choices[0].message.content')
+          echo "Raw API response: $RESPONSE"
+          COMMENT=$(echo "$RESPONSE" | jq -r '.choices[0].message.content // .error.message // .message // "Unknown error"')
           printf "## AI Review (GitHub Models)\n\n%s" "$COMMENT" > body.txt
           gh pr comment "$PR_NUMBER" --repo "$REPO" --body-file body.txt
